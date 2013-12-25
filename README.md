@@ -11,7 +11,7 @@ Automatically generate lazy getters for properties. Takes all of the properties 
 }
  ```
 
-Actual practical applications may be limited, as implementing these methods is not to much boilerplate, but it is interesting none the less. Feel free to take it and mess around with it, or submit a pull request if you want to improve or change something. A goal would be to be able to implement this in a superclass and just inherit from it for subclasses so you don't have to copy and paste this code into every class where you want the effect, but you can't do this as subclass properties do not seem available in the `+load` method.
+Actual practical applications may be limited, as implementing these methods is not to much boilerplate, but it is interesting none the less. Feel free to take it and mess around with it, or submit a pull request if you want to improve or change something. Generator methods are implemented in a superclass, and classes that want to have this behavior should inherit from `TJLLazyProperties`.
 
 <h1>License</h1>
 If you use TJLLazyProperties and you like it, feel free to let me know, <terry@ploverproductions.com>. If you have any issue or want to make improvements, submit a pull request.<br><br>
