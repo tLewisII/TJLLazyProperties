@@ -8,10 +8,17 @@
 
 #import "TJLLazyProperties.h"
 #import <objc/runtime.h>
+
 @implementation TJLLazyProperties
-+ (void)load {
+
+- (instancetype)init {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
     unsigned int count;
-    objc_property_t *properties = class_copyPropertyList(self, &count);
+    objc_property_t *properties = class_copyPropertyList(self.class, &count);
     
     for(unsigned int i = 0; i < count; i++) {
         const char *charName = property_getName(properties[i]);
@@ -24,7 +31,7 @@
         strcat(concat, charName);
 
         SEL sel = NSSelectorFromString(stringName);
-        Ivar ivar = class_getInstanceVariable(self, concat);
+        Ivar ivar = class_getInstanceVariable(self.class, concat);
         free(concat);
         
         IMP imp = imp_implementationWithBlock(^id(id self) {
@@ -36,11 +43,12 @@
             return object;
         });
         
-        Method method = class_getInstanceMethod(self, sel);
+        Method method = class_getInstanceMethod(self.class, sel);
         method_setImplementation(method, imp);
     }
     
     free(properties);
+    return self;
 }
 
 static NSString *getPropertyType(objc_property_t property) {

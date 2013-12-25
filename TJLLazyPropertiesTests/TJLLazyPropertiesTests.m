@@ -7,44 +7,42 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "TJLLazyProperties.h"
+#import "TJLTestClass.h"
 @interface TJLLazyPropertiesTests : XCTestCase {
-    TJLLazyProperties *_lazyProperties;
+   TJLTestClass *_testClass;
 }
 
 @end
 
 @implementation TJLLazyPropertiesTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-    _lazyProperties = [TJLLazyProperties new];
+    _testClass = [TJLTestClass new];
 }
 
-- (void)tearDown
-{
+- (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
 - (void)test_nonNil_properties {
-    XCTAssertNotNil(_lazyProperties.name, @"name should not be nil");
-    XCTAssertNotNil(_lazyProperties.array, @"array should not be nil");
-    XCTAssertNotNil(_lazyProperties.mutableData, @"mutableData should not be nil");
-    XCTAssertNotNil(_lazyProperties.dictionary, @"dictionary should not be nil");
+    XCTAssertNotNil(_testClass.name, @"name should not be nil");
+    XCTAssertNotNil(_testClass.array, @"array should not be nil");
+    XCTAssertNotNil(_testClass.mutableData, @"mutableData should not be nil");
+    XCTAssertNotNil(_testClass.dictionary, @"dictionary should not be nil");
 }
 
 - (void)test_setterThenGetter {
-    _lazyProperties.name = @"bob";
-    _lazyProperties.array = @[@1];
-    _lazyProperties.mutableData = [[NSMutableData alloc]initWithBytes:"abc" length:3];
-    _lazyProperties.dictionary = @{@"Key" : @"terry"}.mutableCopy;
+    _testClass.name = @"bob";
+    _testClass.array = @[@1];
+    _testClass.mutableData = [[NSMutableData alloc]initWithBytes:"abc" length:3];
+    _testClass.dictionary = @{@"Key" : @"terry"}.mutableCopy;
     
-    XCTAssertTrue([_lazyProperties.name isEqualToString:@"bob"], @"name should be bob");
-    XCTAssertTrue([_lazyProperties.array isEqualToArray:@[@1]], @"array should be @[@1]");
-    XCTAssertTrue([_lazyProperties.mutableData isEqualToData:[[NSMutableData alloc]initWithBytes:"abc" length:3]], @"mutableData should be \"abc\"");
-    XCTAssertTrue([_lazyProperties.dictionary isEqualToDictionary:@{@"Key" : @"terry"}], @"dictionary should be Key : \"terry\"");
+    XCTAssertTrue([_testClass.name isEqualToString:@"bob"], @"name should be bob");
+    XCTAssertTrue([_testClass.array isEqualToArray:@[@1]], @"array should be @[@1]");
+    XCTAssertTrue([_testClass.mutableData isEqualToData:[[NSMutableData alloc]initWithBytes:"abc" length:3]], @"mutableData should be \"abc\"");
+    XCTAssertTrue([_testClass.dictionary isEqualToDictionary:@{@"Key" : @"terry"}], @"dictionary should be Key : \"terry\"");
 
 
 }

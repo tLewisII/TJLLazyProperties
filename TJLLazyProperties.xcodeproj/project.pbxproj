@@ -22,6 +22,7 @@
 		DB5E55B8186A291A001ABBBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB5E55B6186A291A001ABBBA /* InfoPlist.strings */; };
 		DB5E55BA186A291A001ABBBA /* TJLLazyPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5E55B9186A291A001ABBBA /* TJLLazyPropertiesTests.m */; };
 		DB5E55C5186A2937001ABBBA /* TJLLazyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5E55C4186A2937001ABBBA /* TJLLazyProperties.m */; };
+		DBBF4BCF186B50F000A11A80 /* TJLTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF4BCE186B50F000A11A80 /* TJLTestClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		DB5E55B9186A291A001ABBBA /* TJLLazyPropertiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJLLazyPropertiesTests.m; sourceTree = "<group>"; };
 		DB5E55C3186A2937001ABBBA /* TJLLazyProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJLLazyProperties.h; path = Source/TJLLazyProperties.h; sourceTree = "<group>"; };
 		DB5E55C4186A2937001ABBBA /* TJLLazyProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJLLazyProperties.m; path = Source/TJLLazyProperties.m; sourceTree = "<group>"; };
+		DBBF4BCD186B50F000A11A80 /* TJLTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJLTestClass.h; sourceTree = "<group>"; };
+		DBBF4BCE186B50F000A11A80 /* TJLTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJLTestClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 				DB5E55A6186A291A001ABBBA /* Images.xcassets */,
 				DB5E5595186A291A001ABBBA /* Supporting Files */,
 				DB5E55C6186A293C001ABBBA /* Source */,
+				DBBF4BD0186B522600A11A80 /* Test Class */,
 			);
 			path = TJLLazyProperties;
 			sourceTree = "<group>";
@@ -163,6 +167,15 @@
 				DB5E55C4186A2937001ABBBA /* TJLLazyProperties.m */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		DBBF4BD0186B522600A11A80 /* Test Class */ = {
+			isa = PBXGroup;
+			children = (
+				DBBF4BCD186B50F000A11A80 /* TJLTestClass.h */,
+				DBBF4BCE186B50F000A11A80 /* TJLTestClass.m */,
+			);
+			name = "Test Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5E55A5186A291A001ABBBA /* TJLViewController.m in Sources */,
+				DBBF4BCF186B50F000A11A80 /* TJLTestClass.m in Sources */,
 				DB5E55C5186A2937001ABBBA /* TJLLazyProperties.m in Sources */,
 				DB5E559B186A291A001ABBBA /* main.m in Sources */,
 				DB5E559F186A291A001ABBBA /* TJLAppDelegate.m in Sources */,
