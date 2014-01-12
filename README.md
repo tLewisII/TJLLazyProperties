@@ -1,7 +1,7 @@
 TJLLazyProperties
 =================
 
-Automatically generate lazy getters for properties. Takes all of the properties of a class and generates getters in such a manner as: 
+Automatically generate lazy getters for object-type properties. Takes all of the properties of a class and generates getters in such a manner as: 
  ```
 -(id)object {
   if(!_object) {
