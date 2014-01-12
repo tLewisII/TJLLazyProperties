@@ -13,6 +13,10 @@ Automatically generate lazy getters for object-type properties. Takes all of the
 
 Actual practical applications may be limited, as implementing these methods is not to much boilerplate, but it is interesting none the less. Feel free to take it and mess around with it, or submit a pull request if you want to improve or change something. Generator methods are implemented in a superclass, and classes that want to have this behavior should inherit from `TJLLazyProperties`.
 
+<h2>Installation</h2>
+<hr>
+the prefered method is [Cocoapods](http://www.cocoapods.org), just put `pod 'TJLLazyProperties', '1.0.0'` into your podfile. If you don't want to use cocoapods, just grab the files in the Source folder, drop them into your project and then `#import "TJLLazyProperties.h"` and have the class you wish to have this behavior inherit from `TJLLazyProperties`.
+
 <h1>License</h1>
 If you use TJLLazyProperties and you like it, feel free to let me know, <terry@ploverproductions.com>. If you have any issue or want to make improvements, submit a pull request.<br><br>
 
