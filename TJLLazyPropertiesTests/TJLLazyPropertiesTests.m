@@ -31,6 +31,7 @@
     XCTAssertNotNil(_testClass.array, @"array should not be nil");
     XCTAssertNotNil(_testClass.mutableData, @"mutableData should not be nil");
     XCTAssertNotNil(_testClass.dictionary, @"dictionary should not be nil");
+    XCTAssertFalse(_testClass.boolValue, @"boolValue should be nil");
 }
 
 - (void)test_setterThenGetter {

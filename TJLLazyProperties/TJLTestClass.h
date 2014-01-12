@@ -13,4 +13,5 @@
 @property(strong, nonatomic) NSMutableData *mutableData;
 @property(strong, nonatomic) NSArray *array;
 @property(strong, nonatomic) NSMutableDictionary *dictionary;
+@property(nonatomic, assign) BOOL boolValue;
 @end

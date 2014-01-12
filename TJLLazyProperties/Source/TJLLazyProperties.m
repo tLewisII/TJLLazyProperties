@@ -23,6 +23,7 @@
     for(unsigned int i = 0; i < count; i++) {
         const char *charName = property_getName(properties[i]);
         NSString *stringName = [NSString stringWithUTF8String:charName];
+        if(![@(property_getAttributes(properties[i])) hasPrefix:@"T@"]) continue;
         NSString *type = getPropertyType(properties[i]);
         
         char *underscore = "_";
